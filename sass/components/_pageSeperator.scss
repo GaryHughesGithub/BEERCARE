@@ -1,0 +1,98 @@
+.pageSeperator{
+    position: relative;
+    
+    &__leftTriangle{
+        position:absolute;
+        top: -8em;
+        z-index: 0;
+        
+
+        width: 0;
+	    height: 0;
+	    border-top: 10em solid transparent;
+	    border-left: 10em solid var(--contrast);
+    }
+
+    &__rectangle{
+        width: 100%;
+	    height: 6em;
+        z-index: 0;
+
+        display: flex;
+        align-items:flex-end;
+        justify-content: center;
+
+        background-color: var(--contrast);
+	    
+    }
+
+    &__rightTriangle{
+        position: absolute;
+        right: 0px;
+
+        width: 0;
+	    height: 0;
+        z-index: 0;
+	    border-right: 10em solid var(--contrast);
+	    border-bottom: 10em solid transparent;
+    }
+
+    &__header{
+
+        text-align: center;
+        font-size: 1.4em;
+        font-family: 'OoohBaby-Regular';
+        color: var(--light);
+        text-decoration: underline  var(--highlight);
+        text-underline-offset: 12px;
+        text-decoration-thickness: 3px;
+        padding: 1.5em;
+    }
+
+    @include respond-to('small'){
+
+        &__leftTriangle{
+            top: -19em;
+            border-top: 20em solid transparent;
+            border-left: 20em solid var(--contrast);
+        }
+    
+        &__rectangle{
+            width: 100%;
+            height: 12em;
+            
+        }
+    
+        &__rightTriangle{
+            border-right: 20em solid var(--contrast);
+            border-bottom: 20em solid transparent;
+        }
+
+        &__header{
+            font-size: 1.5em;
+        }
+    }
+
+    @include respond-to('large'){
+        &__header{
+            font-size: 2.5em;
+            text-underline-offset: 18px;
+        }
+
+        &__leftTriangle{
+            top: -26em;
+            border-top: 27em solid transparent;
+            border-left: 27em solid var(--contrast);
+        }
+
+        &__rectangle{
+            height: 22em;
+        }
+
+        &__rightTriangle{
+            border-right: 27em solid var(--contrast);
+            border-bottom: 27em solid transparent;
+        }
+        
+    }
+}

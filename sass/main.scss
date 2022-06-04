@@ -1,0 +1,25 @@
+//VARIABLES
+@import 'variables/colors.scss';
+
+
+//UTILITIES
+@import 'utilities/fonts.scss';
+
+
+//RESETS
+@import 'resets/normalize.scss';
+@import 'resets/placeholder.scss';
+@import 'resets/reset.local.scss';
+@import 'resets/responsive.scss';
+@import 'resets/typography.scss';
+
+//COMPONENTS
+@import 'components/nav.scss';
+@import 'components/hero.scss';
+@import 'components/pageSeperator.scss';
+@import 'components/about.scss';
+@import 'components/skills.scss';
+@import 'components/myProjects.scss';
+@import 'components/footer.scss';
+@import 'components/contact.scss';
+

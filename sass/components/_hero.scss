@@ -1,0 +1,99 @@
+.hero {
+    display: grid;
+    grid-template-columns:  1fr min-content 1fr;
+    grid-template-rows: min-content min-content;
+
+    background-color: var(--dark);
+    margin-bottom: 2em;
+
+    &__text {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: center;
+        z-index: 1;
+
+        color: var(--light);
+        font-family: 'Montserrat';
+        margin-bottom: 40rem;
+
+        h2{
+            text-decoration: underline  var(--highlight);
+            text-underline-offset: 12px;
+            text-decoration-thickness: 3px;
+        }
+
+    }
+
+    &__header {
+        font-family: 'OoohBaby-Regular';
+        font-size: 4em;
+
+        margin-top: 80rem;
+        margin-bottom: 20rem;
+        text-decoration: none;
+    }
+
+    &__bigpic {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        z-index: 1;
+
+        width: 16em;
+        height: 24em;
+        background-color: var(--light);
+        box-shadow: 15px -15px var(--contrast);
+    }
+
+
+
+    @include respond-to('small') {
+        grid-template-columns: 1fr 1fr max-content 1fr;
+
+        &__text {
+            grid-column: 3/4;
+
+            margin-left: 40rem;
+            margin-top: 80rem;
+            padding: 30rem;
+        }
+
+        &__bigpic {
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+            width: 18em;
+            height: 26em;
+            margin-top: 12em;
+        }
+    }
+
+
+    @include respond-to('large'){
+        grid-template-columns: 1fr min-content 1fr max-content 1fr;
+
+        &__text {
+            grid-column: 4/5;
+            height: 40em;
+            font-size: 1.4em;
+
+            h2{
+                font-size: 1.4em;
+            }
+
+            
+        }
+
+        &__header{
+            font-size: 7em;
+        }
+
+        &__bigpic {
+            width: 26em;
+            height: 34em;
+        }
+    }
+    
+
+
+
+}

@@ -1,0 +1,96 @@
+.skillsGrid{
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-template-rows: repeat(2,min-content);
+    z-index: 1;
+
+    &__list{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3,50px);
+        grid-gap:2em;
+        z-index: 1;
+        
+        margin-top: 2em;
+
+        li{
+            color: var(--light);
+            font-size: 0.6em;
+            margin: auto;
+            width: 50px;
+            text-align: center;
+
+            font-family: 'Montserrat';
+        }
+    }
+
+    &__text{
+        grid-row: 2/3;
+        grid-column: 2/3;
+        position: relative;
+        color: var(--light);
+        font-size: 0.9em;
+        margin-top: 4em;
+        margin-bottom: 4em;
+        font-family: 'Montserrat';
+        z-index: 1;
+    }
+
+    @include respond-to('small'){
+        &__list{
+        grid-template-columns: repeat(4,75px);
+        grid-gap:4em;
+        
+        margin-top: 3em;
+
+        li{
+            font-size: 0.8em;
+            margin-bottom: 2em;
+            width: 75px;
+            text-align: center;
+            
+            font-family: 'Montserrat';
+
+            img{
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    &__text{
+        font-size: 1.2em;
+    }
+
+    }
+
+    @include respond-to('large'){
+        &__list{
+        grid-template-columns: repeat(4,125px);
+        grid-gap:4em;
+        
+        margin-top: 3em;
+
+        li{
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            width: 125px;
+            text-align: center;
+            
+            font-family: 'Montserrat';
+
+            img{
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+        &__text{
+        font-size: 1.4em;
+    }
+
+    }
+}
+
+

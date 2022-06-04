@@ -1,0 +1,12 @@
+.footer {
+    background-color: var(--contrast);
+    color: var(--light);
+    padding: 12rem;
+    font-size: 13rem;
+    text-align: center;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0rem;
+    z-index: 1;
+  }

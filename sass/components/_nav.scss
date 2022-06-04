@@ -1,0 +1,122 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--dark);  
+}
+
+.nav {
+    display: grid;
+    height: 70px;
+    grid-template-rows: repeat(2,min-content);
+    grid-template-columns: min-content 1fr min-content;
+    position: fixed;
+    z-index:2;
+    width: 100%;
+    
+    background-color: var(--dark);
+
+
+    &__icons {
+        position: fixed;
+        right:-100%;
+        background-color: var(--dark);
+        color: var(--light);
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        text-align:end;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        z-index: 1;
+        width: 200px;
+        font-size: 1.8em;
+        box-shadow: -15px 15px var(--contrast);
+        
+        transition: 0.3s;
+
+        li {
+            margin:30px 0;
+        }
+    }
+
+    &__icons.active {
+        right:0;
+    }
+
+    &__hamburger {
+        grid-column:3/4;
+        display: block;
+        width: 100%;
+        padding: 1em;
+
+        .line {
+            display: block;
+            background-color: var(--contrast);
+            z-index: 2;
+            width: 30px;
+            height: 4px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &__hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    &__hamburger.active .line:nth-child(1) {
+        transform: translateY(8px)rotate(45deg);
+    }
+
+    &__hamburger.active .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+
+    
+
+
+
+    @include respond-to('small') {
+        grid-template-columns: 1fr 1fr 1fr  minmax(590rem, auto) ;
+        height:110px;
+
+        &__icons{
+            position: relative;
+            grid-column: 4/5;
+            display: flex;
+            flex-direction: row;
+            right:0;
+            top: 0px;
+            width: 100%;
+            border-radius:0;
+            padding-right: 0;
+            padding-bottom: 0;
+            border: none;
+            box-shadow: none;
+            
+            padding: 40rem;
+            font-size: 20rem;
+
+            li{
+                margin-left: 30rem;
+                margin-right: 50rem;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+        }
+
+        &__icons li:hover {
+            scale: 1.1;
+        }
+
+        &__hamburger {
+            display: none;
+        }
+    
+    }
+}
