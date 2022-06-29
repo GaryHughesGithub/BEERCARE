@@ -1,0 +1,112 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--gamma);  
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    width: 100%;
+    height: 80px;
+
+
+    &__headers{
+        grid-column: 2/3;
+        display: flex;
+        padding: 15px;
+        justify-content: space-evenly;
+
+    }
+
+    &__logo {
+        width: 80px;
+        scale: 1.2;
+
+    }
+
+    &__beercare {
+        font-family: 'Montserrat' ;
+        font-size: 40rem;
+
+    }
+
+    &__tel {
+        display: none;
+    }
+
+    &__email {
+        display: none;
+    }
+
+    &__contactButton {
+        display: none;
+
+        border: solid 1px transparent;
+        color: #333333;
+        background-color: #F6E266;
+        border-radius: 12px;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        justify-content: center;
+        
+        
+
+    }
+
+    // &__shoppingCart {
+    //     width: 15px;
+
+    //     padding: 5px;
+    //     margin-right: 20px;
+    // }
+
+    @include respond-to('small') {
+        
+        &__headers {
+            grid-column: 2/3;
+            align-items: center;
+
+        }
+
+        &__contactButton {
+            display: flex;
+            margin-left: 20px;
+        }
+    }
+
+    @include respond-to('large') {
+        grid-template-columns: 1fr min-content min-content min-content 1fr;
+
+        &__logo {
+            grid-column: 2/3;
+        }
+
+        &__beercare {
+            grid-column: 2/3;
+            margin-right: 40px;
+        }
+
+        
+        &__tel {
+            grid-column: 3/4;
+            display: flex;
+            margin-right: 10px;
+        }
+
+        &__email {
+            grid-column: 3/4;
+            display: flex;
+            margin-right: 10px;
+        }
+
+        &__contactButton {
+            grid-column: 4/5;
+            display: flex;
+        }
+
+    }
+}
