@@ -45,16 +45,20 @@ body{
         display: none;
 
         border: solid 1px transparent;
-        color: #333333;
-        background-color: #F6E266;
+        color: var(--alpha);
+        background-color: var(--beta);
         border-radius: 12px;
         width: 150px;
         height: 40px;
         text-align: center;
         justify-content: center;
-        
-        
+    }
 
+    &__contactButton:hover {
+        scale:1.05;
+        transition: 0.1s ease-in-out;
+        box-shadow: -10px 10px 8px #b3b3b3;
+        border: solid 4px var(--highlight);
     }
 
     // &__shoppingCart {
@@ -80,32 +84,53 @@ body{
 
     @include respond-to('large') {
         grid-template-columns: 1fr min-content min-content min-content 1fr;
+        margin-top: 20px;
+        margin-bottom: 60px;
 
         &__logo {
             grid-column: 2/3;
+            scale: 2;
         }
 
         &__beercare {
             grid-column: 2/3;
-            margin-right: 40px;
+            margin-right: 100px;
+            font-size: 70px;
         }
 
         
         &__tel {
             grid-column: 3/4;
             display: flex;
-            margin-right: 10px;
+            margin-right: 100px;
+            font-size: 25px;
         }
 
         &__email {
             grid-column: 3/4;
             display: flex;
-            margin-right: 10px;
+            margin-right: 100px;
+            font-size: 25px;
         }
 
         &__contactButton {
             grid-column: 4/5;
             display: flex;
+            width: 300px;
+            height: 80px;
+
+            background-color: var(--gamma);
+            background-image: url(/images/btn-fill-yellow.png);
+            background-repeat: repeat-x;
+            background-position:  0 -100%;
+
+            border: solid 4px var(--highlight);
+            font-size: 25px;
+        }
+    
+        &__contactButton:hover {
+            background-position: center;
+            transition: 1.6s ease;
         }
 
     }

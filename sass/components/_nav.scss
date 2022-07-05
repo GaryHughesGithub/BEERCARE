@@ -1,0 +1,134 @@
+.nav {
+    background-color: var(--alpha);
+    color: var(--gamma);
+    width: 100%;
+    font-size: 1.4em;
+    z-index: 100;
+    
+
+    &__icons {
+        background-color: var(--alpha);
+        width: 100%;
+        position: fixed;
+        right: -100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+        font-size: 1.4em;
+        margin-top: 60px;
+        z-index: 100;
+
+        transition: 0.3s;
+
+        li:hover {
+            scale: 1.15;
+        }
+
+        li:nth-child(2){
+            margin-top: 40px;
+        }
+
+        li:nth-child(3){
+            margin-top: 40px;
+        }
+    }
+
+    &__icons.enabl {
+        right: 0;
+    }
+
+    &__hamburger {
+        display: block;
+        margin: auto;
+        
+        width: 100%;
+        padding: 1em;
+
+        .line {
+            display: block;
+            background-color: var(--gamma);
+            width: 45px;
+            height: 4px;
+            margin: 5px auto;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &__hamburger.enabl .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    &__hamburger.enabl .line:nth-child(1) {
+        transform: translateY(8px)rotate(45deg);
+    }
+
+    &__hamburger.enabl .line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @include respond-to('large') {
+        &__icons {
+            display: flex;
+            position: relative;
+            justify-content: space-evenly;
+            flex-direction: row;
+            width: 100%;
+            right: 0;
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            margin-top: 60px;
+        }
+
+        li {
+            width:150px;
+        }
+
+
+        li:nth-child(1) span {
+            display: block;
+            width: 150px;
+            height: 4px;
+            color: var(--beta);
+            background-color: var(--beta);
+
+            margin-top: 20px;
+        }
+
+        li:nth-child(2){
+            margin-top: 0px;
+        }
+
+        li:nth-child(2):hover span {
+            transition: all 0.2s ease-in;
+            position: absolute;
+            display: flex;
+            width: 150px;
+            height: 4px;
+            color: var(--beta);
+            background-color: var(--beta);
+
+            margin-top: 20px;
+        }
+
+
+        li:nth-child(3){
+            margin-top: 0px;
+        }
+
+        li:nth-child(3):hover span {
+            transition: all 0.2s ease-in;
+            display: flex;
+            width: 150px;
+            height: 4px;
+            color: var(--beta);
+            background-color: var(--beta);
+
+            margin-top: 20px;
+        }
+    
+        &__hamburger {
+            display: none;
+        }
+    }
+}
