@@ -29,10 +29,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -67,12 +65,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -80,10 +75,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -100,12 +93,9 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -123,10 +113,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -176,14 +164,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -191,8 +175,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -201,8 +184,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -251,18 +233,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -285,10 +261,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -304,10 +278,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -322,10 +294,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -358,20 +328,6 @@ template {
  */
 [hidden] {
   display: none;
-}
-
-::-webkit-input-placeholder {
-  /* Edge */
-  color: var(--elements);
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: var(--elements);
-}
-
-::placeholder {
-  color: var(--elements);
 }
 
 /*** box sizing border-box for all elements ***/
@@ -439,15 +395,14 @@ fieldset {
 }
 
 html {
-  font-size: 1px;
-  /*for using REM units!*/
+  font-size: 1px; /*for using REM units!*/
 }
 
 body {
   font-family: "Open Sans";
   font-size: 16rem;
   line-height: 1.3;
-  background-color: var(--delta);
+  background-color: var(--alpha);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -520,8 +475,8 @@ body {
 @media (min-width: 1200px) {
   .header {
     grid-template-columns: 1fr min-content min-content min-content 1fr;
-    margin-top: 20px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 40px;
   }
   .header__logo {
     grid-column: 2/3;
@@ -547,8 +502,8 @@ body {
   .header__contactButton {
     grid-column: 4/5;
     display: flex;
-    width: 300px;
-    height: 80px;
+    width: 250px;
+    height: 70px;
     background-color: var(--gamma);
     background-image: url(/images/btn-fill-yellow.png);
     background-repeat: repeat-x;
@@ -572,7 +527,7 @@ body {
 .nav__icons {
   background-color: var(--alpha);
   width: 100%;
-  position: fixed;
+  position: absolute;
   right: -100%;
   flex-direction: column;
   text-align: center;
@@ -584,6 +539,8 @@ body {
 }
 .nav__icons li:hover {
   scale: 1.15;
+  text-decoration: underline 4px var(--beta);
+  text-underline-offset: 12px;
 }
 .nav__icons li:nth-child(2) {
   margin-top: 40px;
@@ -626,12 +583,15 @@ body {
     width: 100%;
     right: 0;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     font-size: 1.2em;
     margin-top: 60px;
   }
   .nav li {
     width: 150px;
+  }
+  .nav li:hover {
+    text-decoration: none;
   }
   .nav li:nth-child(1) span {
     display: block;
@@ -639,7 +599,7 @@ body {
     height: 4px;
     color: var(--beta);
     background-color: var(--beta);
-    margin-top: 20px;
+    margin-top: 12px;
   }
   .nav li:nth-child(2) {
     margin-top: 0px;
@@ -652,7 +612,7 @@ body {
     height: 4px;
     color: var(--beta);
     background-color: var(--beta);
-    margin-top: 20px;
+    margin-top: 12px;
   }
   .nav li:nth-child(3) {
     margin-top: 0px;
@@ -664,7 +624,7 @@ body {
     height: 4px;
     color: var(--beta);
     background-color: var(--beta);
-    margin-top: 20px;
+    margin-top: 12px;
   }
   .nav__hamburger {
     display: none;
@@ -673,22 +633,21 @@ body {
 
 #hero-slider {
   position: relative;
-  height: 250px;
+  height: 300px;
   overflow: hidden;
 }
 
 .hero-slide {
   position: absolute;
-  width: 100%;
+  width: 140%;
   z-index: 5;
-  height: 250px;
+  height: 300px;
 }
 
 .hero-slide img {
   object-fit: contain;
   object-position: center;
   width: 100%;
-  min-height: 100%;
   pointer-events: none;
   filter: brightness(75%);
 }
@@ -770,19 +729,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   color: var(--gamma);
   top: 0;
-  left: 0;
+  margin-left: 15%;
   z-index: 7;
   opacity: 1;
 }
 
 .hero-overlay-text .hero-text {
   font-family: "Montserrat";
-  text-align: center;
+  text-align: start;
   font-size: 24px;
   line-height: 30px;
   color: var(--gamma);
@@ -790,31 +749,30 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-contactbtn {
-  border: solid 1px transparent;
-  color: var(--alpha);
-  background-color: var(--beta);
-  border-radius: 12px;
-  width: 150px;
-  height: 40px;
-  text-align: center;
-  justify-content: center;
+@media (min-width: 767px) {
+  #hero-slider {
+    height: 400px;
+  }
+  .hero-slide {
+    height: 400px;
+  }
+  .hero-overlay-text .hero-text {
+    font-size: 32px;
+  }
 }
-
 @media (min-width: 992px) {
   #hero-slider {
     height: 500px;
   }
-
   .hero-slide {
-    height: 500px;
+    width: 100%;
   }
-
   .hero-overlay-text {
     align-items: flex-start;
     margin-left: 160px;
+    margin-top: 100px;
+    left: 0;
   }
-
   .hero-overlay-text .hero-text {
     text-align: left;
     font-size: 40px;
@@ -827,16 +785,13 @@ body {
   #hero-slider {
     height: 800px;
   }
-
   .hero-slide {
     height: 800px;
   }
-
   .hero-overlay-text {
     align-items: flex-start;
     margin-left: 260px;
   }
-
   .hero-overlay-text .hero-text {
     text-align: left;
     font-size: 70px;
@@ -850,15 +805,213 @@ body {
 }
 .intro__title {
   font-size: 30px;
-  margin-top: 60px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin: 30px 0px;
 }
-.intro__text {
-  font-size: 16px;
-  margin: 20px 0px;
-  z-index: 10;
+
+.card {
+  text-align: center;
+}
+.card__head {
+  text-align: center;
+  font-size: 22px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin: 30px 0px;
+  text-decoration: underline var(--beta) 4px;
+  text-underline-offset: 12px;
+}
+.card__img {
+  width: 80%;
+}
+.card__text {
+  font-size: 18px;
+  font-family: "Montserrat";
+  padding: 14px;
+  margin: 5% 5% 10% 10%;
+}
+
+@media (min-width: 992px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr min-content min-content min-content 1fr;
+  }
+  .cardContainer .card {
+    width: 350px;
+  }
+  .cardContainer .card__head {
+    text-align: center;
+    font-size: 22px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    margin: 30px 0px;
+    text-decoration: underline var(--beta) 4px;
+    text-underline-offset: 12px;
+  }
+  .cardContainer .card__img {
+    width: 100%;
+    height: 300px;
+    padding: 30px;
+  }
+  .cardContainer .card__text {
+    font-size: 20px;
+    font-family: "Montserrat";
+    padding: 30px;
+    margin: 0;
+  }
+  .cardContainer .card:nth-child(1) {
+    grid-column: 2/3;
+  }
+  .cardContainer .card:nth-child(2) {
+    grid-column: 3/4;
+  }
+  .cardContainer .card:nth-child(3) {
+    grid-column: 4/5;
+  }
+}
+@media (min-width: 1200px) {
+  .cardContainer .card {
+    margin-right: 50px;
+  }
+  .cardContainer .card__head {
+    margin-top: 50px;
+  }
+  .intro__title {
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+  }
+}
+.footer {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-template-rows: auto repeat(6);
+  font-family: "Montserrat";
+  background-color: var(--alpha);
   color: var(--gamma);
 }
-.intro__video {
-  width: 100%;
+.footer__logo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  justify-self: flex-end;
+  margin-top: 40px;
+  padding: 20px;
+}
+.footer__title {
+  grid-column: 2/3;
+  grid-row: 1/2;
   margin-top: 60px;
+  font-size: 28px;
+  line-height: 25px;
+  font-weight: 600;
+}
+.footer__title span {
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer__subtitle {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: 30px 0px;
+  font-weight: 400;
+}
+.footer__subtitle span {
+  font-weight: 600;
+}
+.footer__weekends {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.footer__FBlogo {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  padding: 30px 0px;
+  font-weight: 400;
+}
+.footer__FBlogo img {
+  width: 40px;
+}
+.footer__rights {
+  grid-column: 1/3;
+  grid-row: 5/6;
+  padding: 30px;
+  line-height: 35px;
+}
+@media (min-width: 992px) {
+  .footer {
+    grid-template-columns: 1fr max-content 1fr max-content 1fr;
+    grid-template-rows: 1fr min-content min-content;
+  }
+  .footer__logo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-start;
+    margin-top: 20px;
+    scale: 1.5;
+  }
+  .footer__title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: block;
+    justify-self: flex-end;
+    margin-left: 100px;
+    font-size: 36px;
+  }
+  .footer__subtitle {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    display: block;
+    align-items: center;
+    margin-top: 55px;
+  }
+  .footer__weekends {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    display: block;
+    align-items: center;
+    margin-top: 120px;
+  }
+  .footer__FBlogo {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .footer__rights {
+    grid-column: 2/5;
+    grid-row: 3/4;
+    display: flex;
+    padding: 30px 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__logo {
+    margin-top: 80px;
+    scale: 1.8;
+  }
+  .footer__title {
+    margin-left: 120px;
+    margin-top: 85px;
+    font-size: 42px;
+  }
+  .footer__subtitle {
+    margin-top: 75px;
+  }
+  .footer__weekends {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    display: block;
+    align-items: center;
+    margin-top: 120px;
+  }
+  .footer__FBlogo {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .footer__rights {
+    grid-column: 2/5;
+    grid-row: 3/4;
+    display: flex;
+    padding: 30px 0px;
+  }
 }/*# sourceMappingURL=main.css.map */

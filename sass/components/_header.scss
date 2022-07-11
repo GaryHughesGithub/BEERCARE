@@ -84,8 +84,8 @@ body{
 
     @include respond-to('large') {
         grid-template-columns: 1fr min-content min-content min-content 1fr;
-        margin-top: 20px;
-        margin-bottom: 60px;
+        margin-top: 10px;
+        margin-bottom: 40px;
 
         &__logo {
             grid-column: 2/3;
@@ -116,8 +116,8 @@ body{
         &__contactButton {
             grid-column: 4/5;
             display: flex;
-            width: 300px;
-            height: 80px;
+            width: 250px;
+            height: 70px;
 
             background-color: var(--gamma);
             background-image: url(/images/btn-fill-yellow.png);

@@ -9,7 +9,7 @@
     &__icons {
         background-color: var(--alpha);
         width: 100%;
-        position: fixed;
+        position:absolute;
         right: -100%;
         flex-direction: column;
         text-align: center;
@@ -22,6 +22,8 @@
 
         li:hover {
             scale: 1.15;
+            text-decoration: underline 4px var(--beta);
+            text-underline-offset: 12px;
         }
 
         li:nth-child(2){
@@ -75,13 +77,17 @@
             width: 100%;
             right: 0;
             text-align: center;
-            padding: 40px;
+            padding: 20px;
             font-size: 1.2em;
             margin-top: 60px;
         }
 
         li {
             width:150px;
+        }
+
+        li:hover {
+            text-decoration: none;
         }
 
 
@@ -92,7 +98,7 @@
             color: var(--beta);
             background-color: var(--beta);
 
-            margin-top: 20px;
+            margin-top: 12px;
         }
 
         li:nth-child(2){
@@ -108,7 +114,7 @@
             color: var(--beta);
             background-color: var(--beta);
 
-            margin-top: 20px;
+            margin-top: 12px;
         }
 
 
@@ -124,7 +130,7 @@
             color: var(--beta);
             background-color: var(--beta);
 
-            margin-top: 20px;
+            margin-top: 12px;
         }
     
         &__hamburger {
