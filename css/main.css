@@ -453,8 +453,8 @@ body {
   border-radius: 12px;
   width: 150px;
   height: 40px;
-  text-align: center;
   justify-content: center;
+  align-items: center;
 }
 .header__contactButton:hover {
   scale: 1.05;
@@ -472,7 +472,7 @@ body {
     margin-left: 20px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1900px) {
   .header {
     grid-template-columns: 1fr min-content min-content min-content 1fr;
     margin-top: 10px;
@@ -574,7 +574,7 @@ body {
 .nav__hamburger.enabl .line:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
-@media (min-width: 1200px) {
+@media (min-width: 1900px) {
   .nav__icons {
     display: flex;
     position: relative;
@@ -593,16 +593,23 @@ body {
   .nav li:hover {
     text-decoration: none;
   }
-  .nav li:nth-child(1) span {
-    display: block;
+  .nav li:nth-child(1) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .nav li:nth-child(1):hover span {
+    transition: all 0.2s ease-in;
+    position: absolute;
+    display: flex;
     width: 150px;
     height: 4px;
     color: var(--beta);
     background-color: var(--beta);
-    margin-top: 12px;
+    margin-top: 8px;
   }
   .nav li:nth-child(2) {
-    margin-top: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .nav li:nth-child(2):hover span {
     transition: all 0.2s ease-in;
@@ -612,19 +619,21 @@ body {
     height: 4px;
     color: var(--beta);
     background-color: var(--beta);
-    margin-top: 12px;
+    margin-top: 8px;
   }
   .nav li:nth-child(3) {
-    margin-top: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .nav li:nth-child(3):hover span {
     transition: all 0.2s ease-in;
+    position: absolute;
     display: flex;
     width: 150px;
     height: 4px;
     color: var(--beta);
     background-color: var(--beta);
-    margin-top: 12px;
+    margin-top: 8px;
   }
   .nav__hamburger {
     display: none;
@@ -781,7 +790,7 @@ body {
     margin-bottom: 40px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1900px) {
   #hero-slider {
     height: 800px;
   }
@@ -870,12 +879,18 @@ body {
     grid-column: 4/5;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1900px) {
   .cardContainer .card {
-    margin-right: 50px;
+    margin: 20px 100px 150px 100px;
+    width: 450px;
   }
   .cardContainer .card__head {
     margin-top: 50px;
+  }
+  .cardContainer .card__img {
+    width: 450px;
+    height: 400px;
+    padding: 30px;
   }
   .intro__title {
     font-size: 35px;
@@ -984,9 +999,9 @@ body {
     padding: 30px 0px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1900px) {
   .footer__logo {
-    margin-top: 80px;
+    margin-top: 40px;
     scale: 1.8;
   }
   .footer__title {
@@ -1002,7 +1017,7 @@ body {
     grid-row: 1/2;
     display: block;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 160px;
   }
   .footer__FBlogo {
     grid-column: 4/5;

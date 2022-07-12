@@ -92,11 +92,17 @@
 
     .cardContainer {
          .card {
-            margin-right:50px;
-
+            margin:20px 100px 150px 100px;
+            width: 450px;
 
             &__head {
                 margin-top: 50px;
+            }
+
+            &__img {
+                width: 450px;
+                height:400px;
+                padding: 30px;
             }
         }
 

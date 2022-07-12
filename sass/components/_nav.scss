@@ -91,18 +91,27 @@
         }
 
 
-        li:nth-child(1) span {
-            display: block;
+        li:nth-child(1) {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        li:nth-child(1):hover span {
+            transition: all 0.2s ease-in;
+            position: absolute;
+            display: flex;
             width: 150px;
             height: 4px;
             color: var(--beta);
             background-color: var(--beta);
 
-            margin-top: 12px;
+            margin-top: 8px;
         }
+        
 
         li:nth-child(2){
-            margin-top: 0px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         li:nth-child(2):hover span {
@@ -114,23 +123,25 @@
             color: var(--beta);
             background-color: var(--beta);
 
-            margin-top: 12px;
+            margin-top: 8px;
         }
 
 
         li:nth-child(3){
-            margin-top: 0px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         li:nth-child(3):hover span {
             transition: all 0.2s ease-in;
+            position: absolute;
             display: flex;
             width: 150px;
             height: 4px;
             color: var(--beta);
             background-color: var(--beta);
 
-            margin-top: 12px;
+            margin-top: 8px;
         }
     
         &__hamburger {
