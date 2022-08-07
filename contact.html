@@ -41,7 +41,7 @@
               <img src="images/fillingPint.jpg" alt=""/>
               <div class="hero-overlay-text">
                 <span class="hero-text">
-                  Beer Line <br>Maintenance & Cleaning
+                  Get In Touch
                 </span>
               </div>
             </div>
@@ -49,7 +49,7 @@
               <img src="images/beertaps.jpg" alt=""/>
               <div class="hero-overlay-text">
                 <span class="hero-text">
-                  Draft Beer <br>Dispense Solutions
+                  Get In Touch
                 </span>
               </div>
             </div>
@@ -73,27 +73,26 @@
           </div>         
     </section>
 
-    <form action="">
-      <label for="name">Name</label>
-      <input type="text" placeholder="Name">
-      <label for="email"></label>
-      <input type="email" name="email" placeholder="email" id="">
-      <label for="tel"></label>
-      <input type="tel" name="tel" placeholder="tel" id="">
-      <input type="radio" name="radio_phone" id="">
-      <input type="radio" name="radio_email" id="">
-      <p>Select preferred contact method</p>
-      <label for="textarea">Message</label>
-      <input type="textarea" placeholder="Message" name="textarea" id="">
-      <button type="submit">Submit</button>
-    </form>
+    <form id="contact" class="contactform" action="mailto:gclmcodes@outlook.com">
+      <p class="contactform__text">Please fill out the form below
+          <br>
+          <br>
+          <span>Contact</span></p>
+      <input class="contactform__name" type="text" placeholder="Name" required>
+
+      <input class="contactform__email" type="email" placeholder="Email" required>
+
+      <textarea class="contactform__message" type="text" placeholder="Message"></textarea>
+
+      <button class="contactform__submit" type="submit">Submit Query</button>
+  </form>
 
     <footer class="footer">
-      <a class="footer__logo" href="#index"><img src="images/beer 1.svg" alt=""></a>
+      <a class="footer__logo" href="/index.html"><img src="images/beer 1.svg" alt=""></a>
       <h3 class="footer__title">BEERCARE <br><span>Dispense Solutions</span></h3>
       <h4 class="footer__subtitle"><span>OPENING HOURS</span> <br>Mon - Fri 09:00 - 17:00</h4>
       <p class="footer__weekends">Sat 09:00 - 14:00 <br>(Email enquiries only)</p>
-      <a class="footer__FBlogo" href="https://www.facebook.com/beercareuk/"><img src="images/facebook-icon-logo-svgrepo-com.svg" alt=""></a>
+      <a class="footer__FBlogo" target="_blank" href="https://www.facebook.com/beercareuk/"><img src="images/facebook-icon-logo-svgrepo-com.svg" alt=""></a>
       <p class="footer__rights">©All Rights Reserved 2022 Designed by gclmCodes@outlook.com</p>
     </footer>
     

@@ -1029,4 +1029,210 @@ body {
     display: flex;
     padding: 30px 0px;
   }
+}
+
+.contactform {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: repeat(5, min-content);
+}
+.contactform__text {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  z-index: 1;
+  color: var(--light);
+  font-family: "Montserrat";
+  font-size: 0.9em;
+  width: 20em;
+  text-align: center;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+.contactform__text span {
+  font-family: "Montserrat";
+  font-size: 3em;
+  text-decoration: underline 8px var(--beta);
+  text-underline-offset: 22px;
+}
+.contactform__name {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  z-index: 1;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  height: 2.5em;
+}
+.contactform__email {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  z-index: 1;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  height: 2.5em;
+}
+.contactform__message {
+  grid-row: 4/5;
+  grid-column: 2/3;
+  z-index: 1;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  height: 10em;
+}
+.contactform__submit {
+  z-index: 1;
+  grid-row: 5/6;
+  grid-column: 2/3;
+  height: 2.5em;
+  width: 100%;
+  color: var(--alpha);
+  background-color: var(--beta);
+  font-family: "Montserrat";
+  margin-bottom: 10em;
+  border-radius: 12px;
+}
+.contactform__submit:hover {
+  scale: 1.05;
+  transition: 0.1s ease-in-out;
+  box-shadow: -10px 10px 8px #b3b3b3;
+  border: solid 4px var(--highlight);
+}
+@media (min-width: 767px) {
+  .contactform__text {
+    font-size: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .contactform {
+    grid-template-columns: 1fr min-content min-content 1fr;
+    grid-template-rows: repeat(4, min-content);
+  }
+  .contactform__text {
+    grid-row: 1/2;
+    grid-column: 2/4;
+    font-size: 1.5em;
+    width: 38em;
+    margin-top: 2em;
+  }
+  .contactform__name {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    height: 3em;
+  }
+  .contactform__email {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    margin-left: 1em;
+    height: 3em;
+  }
+  .contactform__message {
+    grid-row: 3/4;
+    grid-column: 2/4;
+    height: 14em;
+  }
+  .contactform__submit {
+    z-index: 1;
+    grid-row: 4/5;
+    grid-column: 2/4;
+    height: 3em;
+    width: 100%;
+    margin-bottom: 12em;
+  }
+}
+
+.maint {
+  text-align: center;
+}
+.maint__title {
+  font-size: 30px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin-top: 80px;
+  text-decoration: underline 6px var(--beta);
+  text-underline-offset: 12px;
+}
+
+.maintcard {
+  text-align: center;
+}
+.maintcard__head {
+  text-align: center;
+  font-size: 22px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  margin: 30px 0px;
+  text-decoration: underline var(--beta) 4px;
+  text-underline-offset: 12px;
+}
+.maintcard__img {
+  width: 80%;
+}
+.maintcard__text {
+  font-size: 18px;
+  font-family: "Montserrat";
+  padding: 14px;
+  margin: 5% 5% 10% 10%;
+}
+
+@media (min-width: 992px) {
+  .maintcardContainer {
+    display: grid;
+    grid-template-columns: 1fr 800px 1fr;
+  }
+  .maintcardContainer .maintcard {
+    width: 100%;
+  }
+  .maintcardContainer .maintcard__head {
+    text-align: center;
+    font-size: 22px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    text-decoration: underline var(--beta) 4px;
+    text-underline-offset: 12px;
+  }
+  .maintcardContainer .maintcard__img {
+    width: 100%;
+    height: 600px;
+    padding: 30px;
+    margin: 50px 0;
+  }
+  .maintcardContainer .maintcard__text {
+    font-size: 20px;
+    font-family: "Montserrat";
+    padding: 30px;
+    margin: 0 0 100px 0;
+  }
+  .maintcardContainer .maintcard:nth-child(1) {
+    grid-column: 2/3;
+  }
+}
+.lightbox {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  align-content: center;
+  gap: 16px;
+  height: 100vh;
+}
+
+.zoom-image {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#lightboxBg {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(150, 150, 150, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+#lightbox.active {
+  display: grid;
+  place-items: center;
 }/*# sourceMappingURL=main.css.map */

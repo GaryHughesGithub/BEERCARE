@@ -1,0 +1,10 @@
+.contact__button {
+  border: solid 1px transparent;
+  color: var(--alpha);
+  background-color: var(--beta);
+  border-radius: 12px;
+  width: 150px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=contact.css.map */
