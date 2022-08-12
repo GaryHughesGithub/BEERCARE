@@ -10,13 +10,14 @@
         background-color: var(--alpha);
         width: 100%;
         position:absolute;
-        right: -100%;
+        left: -100%;
         flex-direction: column;
         text-align: center;
         padding: 40px;
         font-size: 1.4em;
         margin-top: 60px;
         z-index: 100;
+        // display: none;
 
         transition: 0.3s;
 
@@ -36,7 +37,8 @@
     }
 
     &__icons.enabl {
-        right: 0;
+        left: 0;
+        // display: flex;
     }
 
     &__hamburger {

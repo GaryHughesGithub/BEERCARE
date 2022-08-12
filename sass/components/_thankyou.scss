@@ -1,0 +1,17 @@
+.thanks {
+  display: flex;
+  height: 500px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+
+
+  &__title {
+    font-family: Montserrat;
+    line-height: 60px;
+    width: 400px;
+    font-size: 40px;
+  }
+  
+}
