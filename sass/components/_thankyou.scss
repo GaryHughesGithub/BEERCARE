@@ -9,9 +9,12 @@
 
   &__title {
     font-family: Montserrat;
-    line-height: 60px;
+    line-height: 100px;
     width: 400px;
     font-size: 40px;
+    text-decoration: underline 6px var(--beta);
+    text-underline-offset: 18px;
+    
   }
   
 }
