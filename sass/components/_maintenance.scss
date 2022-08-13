@@ -6,7 +6,9 @@
         font-size: 30px;
         font-family: 'Montserrat';
         font-weight: 600;
-        margin-top: 90px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+
 
         text-decoration: underline 6px var(--beta);
         text-underline-offset: 12px;
@@ -21,7 +23,7 @@
         font-size: 22px;
         font-family: 'Montserrat';
         font-weight: 600;
-        margin: 30px 0px;
+        margin: 0px 0px;
 
         text-decoration: underline var(--beta) 4px;
         text-underline-offset: 12px;
@@ -42,6 +44,15 @@
 }
 
 @include respond-to('medium') {
+
+
+    .maint {
+        text-align: center;
+    
+    
+        &__title {
+            margin-bottom: 0px;
+    }}
 
     .maintcardContainer {
         display: grid;
