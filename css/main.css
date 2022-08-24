@@ -1322,11 +1322,10 @@ body {
 }
 .thanks {
   display: flex;
-  height: 1000px;
+  height: 600px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
 }
 .thanks__title {
   font-family: Montserrat;
