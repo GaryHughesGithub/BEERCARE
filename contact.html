@@ -82,6 +82,11 @@
       <input class="contactform__email" type="email" placeholder="Email" name="email" required>
       <input type="hidden" name="_next" value="https://beercare.netlify.app/thankyou.html">
       <textarea class="contactform__message" type="text" placeholder="Message" name="message" required></textarea>
+      <p class="contactform__select">Please select preferred contact method</p>
+      <div class="contactform__contactMethod">
+        <input type="radio" name="contactMethod" value="phone"><span>Phone</span><br>
+        <input type="radio" name="contactMethod" value="email"><span>Email</span><br>
+      </div>
       <button class="contactform__submit" type="submit">Submit Query</button>
     </form>
 
